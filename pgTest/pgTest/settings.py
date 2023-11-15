@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'testdb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -85,6 +86,9 @@ DATABASES = {
         'PASSWORD': secrets['DB_PASSWORD'],
         'HOST': secrets['DB_HOST'],
         'PORT': secrets['DB_PORT'],
+        'OPTIONS': {
+            'options': '-c search_path=djdbschema',
+        },
     }
 }
 
