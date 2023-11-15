@@ -1,2 +1,1 @@
 # ferretsInDjango
-# ferretsInDjango
